@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grade Distribution Dashboard</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="histogram.css">
+    </head>
+    <body onload="loadStarters()">
+        <h1>Grade Distribution</h1>
+        <figure id="csvinput" class="center">
+            <input class="file-input" id="fileInput" type="file" accept=".csv" name="file" oninput="loadFile(this)">
+        </figure>
+        <p class="center" id="filename">Selected file: None</p>
+        <figure class="center">
+            <button id="resetVal" class="resetbtn">Reset values</button>
+        </figure>
+        <main class="container">
+            <figure class="lower-bound-table column" id="boundTable">
+                <h2 class="center">Lower bounds</h2>
+                <table>
+                    <tr>
+                        <th style="width:30%">Grade Letters</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>Max</td>
+                        <td><input id="0" type="text" value="100" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td><input id="1" type="text" value="95" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td><input id="2" type="text" value="90" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>
+                        <td><input id="3" type="text" value="85" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>
+                        <td><input id="4" type="text" value="80" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td><input id="5" type="text" value="75" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>B-</td>
+                        <td><input id="6" type="text" value="70" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>C+</td>
+                        <td><input id="7" type="text" value="65" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td><input id="8" type="text" value="60" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>C-</td>
+                        <td><input id="9" type="text" value="55" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td><input id="10" type="text" value="50" onchange="validate(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td><input id="11" type="text" value="0" onchange="validate(this)"></td>
+                    </tr>
+                </table>
+            </figure>
+            <figure class="stats" id="stat">
+                <h2 class="center">Stats</h2>
+                <table class="stats-data">
+                    <tr>
+                        <td>Highest</td>
+                        <td class="data" id="highest">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Lowest</td>
+                        <td class="data" id="lowest">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Mean</td>
+                        <td class="data" id="mean">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Median</td>
+                        <td class="data" id="median">N/A</td>
+                    </tr>  
+                </table>
+            </figure>
+            <figure class="histogram column">
+                <h2 class="center">Histogram</h2>
+                <div id="noData">
+                    <h3 class="center">No data found</h3>
+                    <p>Please upload CSV file</p>
+                </div>
+                <table id="histogram">
+                </table>
+            </figure>
+        </main>
+        <script src="calculate.js"></script>
+    </body>
+</html>

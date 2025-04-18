@@ -1,0 +1,165 @@
+html{
+    border-left: 30px solid red;
+    border-right: 30px solid red;
+}
+
+table, td, th{
+    border-collapse: collapse;
+    height: 30px;
+}
+
+tr:nth-child(even) {
+    background-color: #b4aaaa;
+  }
+
+th{
+    border: 1px solid black;
+}
+
+td, th{
+    border-color: #96D4D4;
+    padding: 10px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+#noData{
+    margin-top: 330px;
+}
+
+input{
+    padding: 7px;
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid rgb(240, 235, 235);
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+input:focus{
+    background-color: rgb(201, 225, 245);
+}
+
+h1, h2{
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+
+input.file-input{
+    border: 4px solid rgb(230, 221, 221);
+    margin-bottom: 2px;
+    background-color:  rgb(230, 221, 221);
+    padding: 0px;
+    width: auto;
+}
+
+.file-input{
+    clear: both;
+}
+
+.lower-bound-table{
+    background-color: #f3f2f2;
+    width: 20%;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.column {
+    
+    padding: 0 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.stats{
+    background-color: #f3f2f2;
+    width: auto;
+    padding: 12px;
+    border-radius: 12px;
+    height: 270px;
+    margin-left: 20px;
+}
+
+.stats-data{
+    height: 40px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+}
+
+.data{
+    margin-left: 90px;
+    display: flex;
+}
+
+.center{
+    text-align: center;
+    border-collapse: collapse;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bar{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    width: 1px;
+}
+
+.histogram{
+    background-color: #f3f2f2;
+    width: auto;
+    height: 700px;
+    border-radius: 12px;
+    margin-left: 20px;
+    
+}
+
+.histogram-table{
+    width: auto;
+    height: auto;
+}
+
+.container{
+    display: flex;
+  justify-content: center;
+}
+
+.resetbtn{
+    border-radius: 45px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #e42323;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    transition: all 0.3s ease 0s;
+    width: 150px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.resetbtn:hover{
+    box-shadow: 0px 15px 20px rgba(25, 185, 121, 0.4);
+    transform: translateY(-5px);
+    background-color: rgb(47, 51, 47);
+}
